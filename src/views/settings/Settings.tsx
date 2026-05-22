@@ -2,8 +2,7 @@ import "./Settings.sass";
 
 import { Icon } from "@iconify/react";
 import { useEffect, useRef, useState } from "react";
-import { type FC, memo, useContext, useMemo } from "react";
-import GitHubButton from "react-github-btn";
+import { type FC, memo, useContext } from "react";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
 
 import { UiContext } from "../../contexts/ui";

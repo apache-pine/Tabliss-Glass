@@ -1,4 +1,3 @@
-import { HOURS } from "../../../utils";
 import { API } from "../../types";
 
 export type RSSItem = {
@@ -9,6 +8,7 @@ export type RSSItem = {
 
 export type RSSCache = {
   timestamp: number;
+  feedUrl: string;
   items: RSSItem[];
   error?: string;
 };

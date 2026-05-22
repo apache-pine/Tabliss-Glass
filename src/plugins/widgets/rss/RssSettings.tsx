@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { defineMessages, useIntl } from "react-intl";
 
-import { Props } from "./types";
+import { defaultData, Props } from "./types";
 
 const messages = defineMessages({
   feedUrl: {
@@ -26,7 +26,7 @@ const messages = defineMessages({
   },
 });
 
-const RssSettings: FC<Props> = ({ data, setData }) => {
+const RssSettings: FC<Props> = ({ data = defaultData, setData }) => {
   const intl = useIntl();
 
   const handleFeedUrlChange = (url: string) => {

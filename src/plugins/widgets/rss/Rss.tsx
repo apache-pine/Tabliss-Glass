@@ -1,7 +1,7 @@
 import "./Rss.sass";
 
 import type { FC } from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { defineMessages, useIntl } from "react-intl";
 
 import { useCachedEffect } from "../../../hooks";
@@ -49,15 +49,7 @@ const Rss: FC<Props> = ({ cache, data = defaultData, setCache, loader }) => {
 
   const [isFetching, setIsFetching] = useState(false);
   const feedSourceLabel = data.feedUrl ? getFeedSourceLabel(data.feedUrl) : "";
-
-  // Debug: log data changes
-  useEffect(() => {
-    console.log("[RSS Widget] Data received:", {
-      feedUrl: data.feedUrl,
-      refreshInterval: data.refreshInterval,
-      maxItems: data.maxItems,
-    });
-  }, [data]);
+  const activeCache = cache?.feedUrl === data.feedUrl ? cache : undefined;
 
   useCachedEffect(
     () => {
@@ -78,20 +70,9 @@ const Rss: FC<Props> = ({ cache, data = defaultData, setCache, loader }) => {
     [data.feedUrl, data.maxItems],
   );
 
-  // If the feed URL changes externally, clear cache to show loading state
-  useEffect(() => {
-    console.log("[RSS] Feed URL changed to:", data.feedUrl);
-
-    if (setCache) {
-      setCache(undefined as Parameters<typeof setCache>[0]);
-    }
-
-    // fetch will be triggered by useCachedEffect dependency
-  }, [data.feedUrl, setCache]);
-
-  const isLoading = isFetching || !cache;
-  const hasError = cache?.error;
-  const items = cache?.items || [];
+  const isLoading = isFetching || !activeCache;
+  const hasError = activeCache?.error;
+  const items = activeCache?.items || [];
 
   return (
     <div className="Rss">
@@ -123,7 +104,7 @@ const Rss: FC<Props> = ({ cache, data = defaultData, setCache, loader }) => {
 
         {hasError && (
           <div className="RssMessage RssError">
-            {intl.formatMessage(messages.error)}: {cache.error}
+            {intl.formatMessage(messages.error)}: {activeCache.error}
           </div>
         )}
 

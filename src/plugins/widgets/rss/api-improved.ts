@@ -8,6 +8,7 @@ export async function fetchRSSFeed(
   if (!data.feedUrl) {
     return {
       timestamp: Date.now(),
+      feedUrl: data.feedUrl,
       items: [],
       error: "No feed URL configured",
     };
@@ -32,6 +33,7 @@ export async function fetchRSSFeed(
       );
       return {
         timestamp: Date.now(),
+        feedUrl: data.feedUrl,
         items: [],
         error: `CORS proxy error: ${response.status} ${response.statusText}`,
       };
@@ -44,6 +46,7 @@ export async function fetchRSSFeed(
       console.error("Unexpected CORS proxy response structure:", jsonData);
       return {
         timestamp: Date.now(),
+        feedUrl: data.feedUrl,
         items: [],
         error: "Invalid response from CORS proxy",
       };
@@ -58,6 +61,7 @@ export async function fetchRSSFeed(
       console.error("XML parse error in feed");
       return {
         timestamp: Date.now(),
+        feedUrl: data.feedUrl,
         items: [],
         error: "Failed to parse RSS feed (XML parse error)",
       };
@@ -90,6 +94,7 @@ export async function fetchRSSFeed(
 
     return {
       timestamp: Date.now(),
+      feedUrl: data.feedUrl,
       items,
     };
   } catch (error) {
@@ -101,6 +106,7 @@ export async function fetchRSSFeed(
     });
     return {
       timestamp: Date.now(),
+      feedUrl: data.feedUrl,
       items: [],
       error: `Network error: ${errorMsg}`,
     };
