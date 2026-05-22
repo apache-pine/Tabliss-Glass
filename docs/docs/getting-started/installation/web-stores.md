@@ -1,18 +1,13 @@
 ---
-title: Web Stores (Recommended)
+title: Manual Installation
 sidebar_position: 1
 ---
 
 import DataLossWarning from '../../\_data-loss-warning.mdx';
 
-import DownloadButtons from '@site/src/components/DownloadButtons';
+# Manual Installation
 
-# Web Stores (Recommended)
-
-The easiest way to install TablissNG is via the official browser stores. These versions provide automatic updates and are verified by the browser vendors.
-
-<DownloadButtons height={70} />
-
-**Note:** If you prefer manual installation or want to use the latest development builds, please see the platform-specific guides in this section.
+Tabliss Glass is intended to be loaded locally rather than installed from a browser store.
+Use the platform-specific guides in this section to load the unpacked build in Edge or test it in another browser.
 
 <DataLossWarning />

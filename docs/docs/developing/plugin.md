@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Get familiar with how the project is organized:
 
 ```bash
-TablissNG/
+Tabliss-Glass/
 ├─ src/
 │  │
 │  ├─ plugins/
@@ -215,9 +215,9 @@ Some widgets rely on extension-specific APIs. Use `BUILD_TARGET` to include them
 
 Run `pnpm run dev` and see your new widget in action! 🎉
 
-<img src={useBaseUrl("/img/screenshots/getting-started/newWidget.png")} alt="TablissNG Screenshot" />
+<img src={useBaseUrl("/img/screenshots/getting-started/newWidget.png")} alt="Tabliss Glass Screenshot" />
 
 (More info in [building](building)).
 
 > Widget data is stored in Extension Storage (or IndexedDB). You can inspect it via DevTools:
-> <img src={useBaseUrl("/img/screenshots/getting-started/indexDb.png")} alt="TablissNG Screenshot" height="200"/>
+> <img src={useBaseUrl("/img/screenshots/getting-started/indexDb.png")} alt="Tabliss Glass Screenshot" height="200"/>

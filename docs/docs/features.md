@@ -7,13 +7,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Features Overview
 
-TablissNG transforms your new tab page into something beautiful and uniquely yours.
+Tabliss Glass transforms your new tab page into something beautiful and uniquely yours.
 
-<img src={useBaseUrl("/img/screenshots/screenshot_1.png")} alt="TablissNG Screenshot" />
+<img src={useBaseUrl("/img/screenshots/screenshot_1.png")} alt="Tabliss Glass Screenshot" />
 
-## Brief Overview of a Few Improvements Over Tabliss
+## Brief Overview of a Few Improvements Over the Base Project
 
-This list is by no means exhaustive. TablissNG includes many other tweaks, quality-of-life improvements, and features not detailed here.
+This list is by no means exhaustive. Tabliss Glass includes many other tweaks, quality-of-life improvements, and features not detailed here.
 
 - Customization
   - Support for custom search engines and browser defaults
@@ -79,7 +79,7 @@ Stay productive with a variety of useful widgets:
 
 ## Privacy & Performance
 
-- **Private**: We care about your privacy. TablissNG requires no unnecessary permissions and does not track you.
+- **Private**: We care about your privacy. Tabliss Glass requires no unnecessary permissions and does not track you.
 - **Fast**: Optimized for speed, so your new tab opens instantly.
 - **Sync**: Your settings sync automatically between your devices via your browser account.
 - **Free**: 100% free and open source forever.

@@ -76,7 +76,7 @@ const Persist: FC = () => {
       <p>
         <FormattedMessage
           id="settings.persist.description"
-          defaultMessage="Would you like Tabliss to ask your browser to save your settings permanently?"
+          defaultMessage="Would you like the personal build to ask your browser to save your settings permanently?"
           description="Persist Settings description"
         />
       </p>

@@ -1,49 +1,80 @@
 :root
-    --accent-color: #3498db
-    --accent-color-hover: color-mix(in srgb, var(--accent-color), black 10%)
-    --accent-color-active: color-mix(in srgb, var(--accent-color), black 20%)
+    /* Glass theme variables */
+    --font: "SF Pro Display", sans-serif
+    --text: #fff
+    --accent: #3182ce
+    --glass: rgba(40, 40, 40, 0.38)
+    --border: rgba(255, 255, 255, 0.18)
+    --blur: blur(18px) saturate(170%)
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.45)
+    --inset: inset 0 1px 0 rgba(255, 255, 255, 0.18)
+    --panel: rgba(255, 255, 255, 0.08)
+    --control: rgba(255, 255, 255, 0.1)
+    --control-hover: rgba(255, 255, 255, 0.16)
+    --chrome: rgba(40, 40, 40, 0.26)
+    --pad: clamp(10px, 2vw, 14px)
+    --radius: clamp(16px, 2vw, 24px)
+    --pill: 9999px
+    --btn: clamp(34px, 4vw, 44px)
+    --icon: clamp(16px, 1.6vw, 20px)
+    --small: clamp(12px, 1.2vw, 15px)
+    --search-w: 360px
+    --search-h: clamp(42px, 6vw, 52px)
+    --link-w: 150px
+    --link-h: 56px
+    --link-pad-x: clamp(16px, 2vw, 22px)
+    --link-radius: clamp(14px, 2vw, 20px)
+    --card-w: 240px
+    --time: clamp(42px, 7vw, 72px)
+    --greeting: clamp(34px, 6vw, 58px)
+    --temp: clamp(24px, 3.8vw, 42px)
 
-    --bg-main: #ffffff
-    --bg-secondary: #f5f7f8
-    --bg-input: #f5f7f8
-    --bg-button: #ecf0f1
+    /* Legacy accent color support */
+    --accent-color: var(--accent)
+    --accent-color-hover: color-mix(in srgb, var(--accent-color), white 14%)
+    --accent-color-active: color-mix(in srgb, var(--accent-color), black 18%)
 
-    --text-main: #5a636a
-    --text-heading: #000000
-    --text-secondary: #7f8c8d
-    --text-muted: #bdc3c7
-    --text-on-primary: #ffffff
+    --bg-main: rgba(11, 16, 29, 0.78)
+    --bg-secondary: rgba(255, 255, 255, 0.08)
+    --bg-input: rgba(255, 255, 255, 0.09)
+    --bg-button: rgba(255, 255, 255, 0.12)
 
-    --border-main: #bdc3c7
-    --border-light: #ecf0f1
+    --text-main: rgba(255, 255, 255, 0.9)
+    --text-heading: #ffffff
+    --text-secondary: rgba(255, 255, 255, 0.7)
+    --text-muted: rgba(255, 255, 255, 0.45)
+    --text-on-primary: #08111f
 
-    --shadow-main: rgba(0, 0, 0, 0.25)
-    --bg-overlay: rgba(255, 255, 255, 0.65)
+    --border-main: rgba(255, 255, 255, 0.16)
+    --border-light: rgba(255, 255, 255, 0.08)
 
-    --scrollbar-track: #F2F2F2
-    --scrollbar-thumb: #BDBDBD
-    --scrollbar-thumb-hover: #6E6E6E
+    --shadow-main: rgba(0, 0, 0, 0.42)
+    --bg-overlay: rgba(10, 14, 24, 0.62)
+
+    --scrollbar-track: rgba(255, 255, 255, 0.05)
+    --scrollbar-thumb: rgba(255, 255, 255, 0.24)
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.38)
 
 .dark
-    --bg-main: #1a1a1a
-    --bg-secondary: #2d2d2d
-    --bg-input: #2d2d2d
-    --bg-button: #242424
+    --bg-main: rgba(8, 12, 22, 0.82)
+    --bg-secondary: rgba(255, 255, 255, 0.08)
+    --bg-input: rgba(255, 255, 255, 0.1)
+    --bg-button: rgba(255, 255, 255, 0.14)
 
-    --text-main: #d4d4d4
+    --text-main: rgba(255, 255, 255, 0.92)
     --text-heading: #ffffff
-    --text-secondary: #dddddd
-    --text-muted: #888888
+    --text-secondary: rgba(255, 255, 255, 0.72)
+    --text-muted: rgba(255, 255, 255, 0.48)
 
-    --border-main: #444444
-    --border-light: #333333
+    --border-main: rgba(255, 255, 255, 0.15)
+    --border-light: rgba(255, 255, 255, 0.08)
 
-    --shadow-main: rgba(0, 0, 0, 0.5)
-    --bg-overlay: rgba(0, 0, 0, 0.65)
+    --shadow-main: rgba(0, 0, 0, 0.52)
+    --bg-overlay: rgba(6, 10, 18, 0.68)
 
-    --scrollbar-track: #2d2d2d
-    --scrollbar-thumb: #444444
-    --scrollbar-thumb-hover: #555555
+    --scrollbar-track: rgba(255, 255, 255, 0.04)
+    --scrollbar-thumb: rgba(255, 255, 255, 0.22)
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.34)
 
 *
     box-sizing: border-box
@@ -67,10 +98,46 @@
     background-color: var(--border-main)
 
 html, body
-    font-family: sans-serif
+    font-family: "SF Pro Display", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif
     font-size: 14px
     line-height: 1.25
     color: var(--text-main)
+    background-color: #08111f
+    background-image: radial-gradient(circle at top, rgba(146, 196, 255, 0.24), transparent 35%), radial-gradient(circle at bottom right, rgba(88, 176, 255, 0.18), transparent 30%), linear-gradient(145deg, #08111f 0%, #0b1424 48%, #111b2c 100%)
+    background-attachment: fixed
+    color-scheme: dark
+
+body
+    min-height: 100vh
+    margin: 0
+    overflow: hidden
+
+button, input, select, textarea
+    font: inherit
+
+select, option
+    color: var(--text-main)
+    background-color: var(--bg-input)
+    border-color: var(--border-main)
+
+select
+    padding: 0.5em
+    border: 1px solid var(--border-main)
+    border-radius: 0.25em
+    background: var(--bg-input)
+
+option
+    background-color: var(--bg-main)
+    color: var(--text-main)
+    
+option:hover, option:focus
+    background-color: var(--accent-color)
+    color: var(--text-on-primary)
+
+option:checked
+    background: linear-gradient(var(--accent-color), var(--accent-color))
+    background-color: var(--accent-color)
+    color: var(--text-on-primary)
 
 a
     color: var(--accent-color)
@@ -105,7 +172,448 @@ i
 i:not(custom-icon) > svg
     height: 1em
     width: auto
+
+.Search > input:focus
+    outline: 0
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15), inset 0 0 0 2px var(--accent)
+
+.Search > input::-webkit-search-cancel-button
+    -webkit-appearance: none
+    appearance: none
+
+.Search > input::placeholder
+    color: #757575
+    opacity: 1
+
+.Search .Suggestions
+    position: absolute
+    left: var(--pad)
+    right: var(--pad)
+    top: calc(100% + clamp(6px, 1vw, 10px))
+    overflow: hidden
+    border-radius: var(--radius)
+
+.Search .search-submit, .TallyCounter .button
+    min-height: var(--btn)
+    border: 1px solid rgba(255, 255, 255, 0.14)
+    border-radius: var(--pill)
+    background: var(--control)
+    color: var(--text)
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16)
+    cursor: pointer
+    transition: transform 0.2s, filter 0.2s, background 0.2s
+
+.Search .search-submit
+    width: var(--btn)
+    height: var(--btn)
+    flex: 0 0 var(--btn)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    margin-left: clamp(6px, 1vw, 10px)
+
+.Search .search-submit:hover, .TallyCounter .button:hover
+    transform: scale(1.04)
+    filter: brightness(1.12)
+    background: var(--control-hover)
+
+.Search .search-submit svg, .TallyCounter svg
+    width: var(--icon)
+    height: var(--icon)
+
+.Links
+    z-index: 999
+    display: flex
+    flex-direction: column
+    gap: clamp(8px, 1.4vh, 14px)
+    max-height: 100%
+    padding: clamp(18px, 3vw, 28px)
+    overflow: visible
+    border-radius: calc(var(--link-radius) + clamp(18px, 3vw, 28px))
+    animation: dockFloat 4s ease-in-out infinite
+
+.Links::-webkit-scrollbar
+    display: none
+
+.Links a
+    box-sizing: border-box
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: clamp(8px, 1vw, 12px)
+    width: var(--link-w)
+    min-height: var(--link-h)
+    aspect-ratio: 3 / 1
+    padding-block: clamp(18px, 3.2vh, 22px)
+    padding-inline: var(--link-pad-x)
+    overflow: hidden
+    border-radius: var(--link-radius)
+    background: var(--panel)
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)
+    color: var(--text)
+    font: var(--small) var(--font)
+    text-decoration: none
+    text-overflow: ellipsis
+    white-space: nowrap
+    transform-origin: center
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), filter 0.25s
+
+.Links a:hover
+    z-index: 3
+    transform: scale(1.08)
+    filter: brightness(1.08)
+
+.Links a:hover + a, .Links a:has(+ a:hover)
+    transform: scale(1.05)
+    filter: brightness(1.05)
+
+.Links a i
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    flex: 0 0 var(--icon)
+    width: var(--icon)
+    height: var(--icon)
+    margin-right: clamp(6px, 1vw, 10px)
+    vertical-align: middle
+
+.Links a img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: contain
+    vertical-align: middle
+
+.Links a span, .Links .LinkText
+    display: inline-block
+    transform: translateY(0)
+    line-height: 1
+
+.Links .LinkText
+    position: relative
+    margin: 0
+    display: inline-flex
+    align-items: center
+    font-size: var(--small)
+    opacity: 1
+    transition: 0.2s
+
+@keyframes dockFloat
+    0%, 100%
+        translate: 0 -0.5%
+    50%
+        translate: 0 0.5%
+
+.Widgets .container .Slot > .Widget > .Time
+    position: relative
+    z-index: 490
+    width: var(--card-w)
+    max-width: 100%
+    /* Keep the widget panel as the single glass surface; inner Time should be transparent */
+    background: transparent
+    box-shadow: none
+    border: none
+    padding: 0
+    border-radius: var(--radius)
+    text-align: center
+
+.Widgets .container .Slot > .Widget > .Time:before
+    content: ""
+    position: absolute
+    z-index: 490
+    left: 50%
+    top: calc(clamp(8px, 1.2vw, 12px) * -1 - 2px)
+    width: 78%
+    height: clamp(8px, 1.2vw, 12px)
+    border-radius: clamp(8px, 1.2vw, 12px) clamp(8px, 1.2vw, 12px) 0 0
+    transform: translateX(-50%)
+    display: none
+
+.Time h1, .Time h3, .Greeting h2
+    font-family: var(--font)
+    text-align: center
+
+.Time h1
+    font-size: var(--time)
+    font-weight: 300 !important
+    line-height: 1.12
+    padding-top: clamp(2px, 0.5vw, 4px)
+
+.Time h3
+    font-size: var(--small)
+    font-weight: 500 !important
+    line-height: 1.2
+    opacity: 0.5
+    padding-bottom: clamp(8px, 1.5vw, 14px)
+
+.Time hr
+    display: none
+
+.Greeting h2
+    color: var(--text)
+    font-size: var(--greeting)
+    font-weight: 400
+    line-height: 1.18
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45)
+
+.TallyCounter, .Weather
+    font-family: var(--font)
+    color: var(--text)
+    padding: var(--pad)
+    border-radius: var(--radius)
+
+.TallyCounter
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    gap: clamp(8px, 1.4vw, 12px)
+    width: var(--card-w)
+    max-width: 100%
+    text-align: center
+
+.TallyCounter .label
+    font-size: var(--small)
+    opacity: 0.68
+
+.TallyCounter .count-container
+    display: grid
+    grid-template-columns: var(--btn) minmax(54px, 1fr) var(--btn)
+    align-items: center
+    gap: clamp(8px, 1.4vw, 12px)
+
+.TallyCounter .count
+    min-width: 0
+    font-size: clamp(30px, 5vw, 52px)
+    font-weight: 300
+    line-height: 1
+
+.TallyCounter .control-btn
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: var(--btn)
+    height: var(--btn)
+
+.TallyCounter .reset-btn
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: clamp(6px, 1vw, 10px)
+    padding: 0 clamp(12px, 2vw, 18px)
+    font: var(--small) var(--font)
+
+.Weather
+    width: var(--card-w)
+    max-width: 100%
+
+.Weather .summary
+    display: grid
+    grid-template-columns: 1fr var(--btn) auto
+    align-items: center
+    gap: clamp(8px, 1.4vw, 12px)
+    font-size: clamp(14px, 1.4vw, 18px)
+
+.Weather .summary svg
+    justify-self: center
+    width: clamp(20px, 2.2vw, 28px)
+    height: clamp(20px, 2.2vw, 28px)
+    opacity: 0.82
+
+.Weather .temperature
+    font-size: var(--temp)
+    font-weight: 300
+
+.Weather .details
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr))
+    gap: clamp(8px, 1.4vw, 12px)
+    margin-top: clamp(8px, 1.4vw, 12px)
+
+.Weather dl
+    margin: 0
+    padding: clamp(8px, 1.3vw, 12px)
+    border-radius: clamp(12px, 1.6vw, 16px)
+    background: var(--panel)
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12)
+
+.Weather dt
+    font-size: clamp(16px, 1.8vw, 22px)
+    font-weight: 500
+
+.Weather dd
+    margin: 0
+    color: rgba(255, 255, 255, 0.62)
+    font-size: clamp(11px, 1vw, 13px)
+
+.info-bar, .Overlay
+    font-family: var(--font)
+
+.info-bar
+    display: grid
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr)
+    align-items: center
+    gap: clamp(8px, 1.5vw, 16px)
+    padding: clamp(8px, 1.5vw, 12px) clamp(10px, 2vw, 20px)
+    color: rgba(255, 255, 255, 0.74)
+    font-size: clamp(11px, 1vw, 13px)
+
+.info-bar a, .Overlay a
+    color: inherit
+    text-decoration: none
+
+.info-bar .left-info, .info-bar .right-info
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+.info-bar .right-info
+    text-align: right
+
+.info-bar .controls, .Overlay
+    display: inline-flex
+    align-items: center
+    gap: clamp(6px, 1vw, 10px)
+    padding: clamp(6px, 1vw, 8px)
+    border: 1px solid rgba(255, 255, 255, 0.14)
+    border-radius: var(--pill)
+    background: var(--chrome)
+    backdrop-filter: var(--blur)
+    -webkit-backdrop-filter: var(--blur)
+    box-shadow: var(--inset)
+
+.info-bar .controls a, .Overlay a
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: clamp(28px, 3vw, 36px)
+    height: clamp(28px, 3vw, 36px)
+    border-radius: var(--pill)
+    transition: background 0.2s, transform 0.2s
+
+.info-bar .controls a:hover, .Overlay a:hover
+    background: var(--control)
+    transform: scale(1.06)
+
+.info-bar svg, .Overlay svg
+    width: clamp(15px, 1.5vw, 18px)
+    height: clamp(15px, 1.5vw, 18px)
+
+/* Settings Sidebar Glass Theme */
+.Settings
+    color: var(--text)
+
+.Settings h2, .Settings h3, .Settings h4, .Settings h5
+    color: var(--text)
+    font-family: var(--font)
+
+.Settings label, .Settings legend
+    color: var(--text)
+    font-family: var(--font)
+
+.Settings input:not([type="checkbox"]):not([type="radio"]),
+.Settings textarea,
+.Settings select
+    background: var(--control)
+    color: var(--text)
+    border: 1px solid var(--border)
+    border-radius: var(--radius)
+    padding: clamp(6px, 1vw, 10px)
+    font-family: var(--font)
+    transition: background 0.2s, border-color 0.2s
+
+.Settings input:not([type="checkbox"]):not([type="radio"]):focus,
+.Settings textarea:focus,
+.Settings select:focus
+    outline: none
+    background: var(--control-hover)
+    border-color: var(--accent)
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2)
+
+.Settings input[type="checkbox"],
+.Settings input[type="radio"]
+    accent-color: var(--accent)
+
+/* Widget Panels Glass Theme */
+.Widget, fieldset.Widget
+    background: var(--glass)
+    backdrop-filter: var(--blur)
+    -webkit-backdrop-filter: var(--blur)
+    border: 1px solid var(--border)
+    border-radius: var(--radius)
+    box-shadow: var(--shadow), var(--inset)
+    padding: var(--pad)
+    color: var(--text)
+
+fieldset.Widget
+    margin: clamp(8px, 1.4vw, 12px) 0
+
+.Widget h1, .Widget h2, .Widget h3, .Widget h4, .Widget h5, .Widget h6
+    color: var(--text)
+    font-family: var(--font)
+
+.Widget p, .Widget span, .Widget label, .Widget legend
+    color: var(--text)
+    font-family: var(--font)
+
+.Widget input:not([type="checkbox"]):not([type="radio"]),
+.Widget textarea,
+.Widget select
+    background: var(--control)
+    color: var(--text)
+    border: 1px solid var(--border)
+    border-radius: calc(var(--radius) / 2)
+    padding: clamp(6px, 1vw, 10px)
+    font-family: var(--font)
+    transition: background 0.2s, border-color 0.2s
+
+.Widget input:not([type="checkbox"]):not([type="radio"]):focus,
+.Widget textarea:focus,
+.Widget select:focus
+    outline: none
+    background: var(--control-hover)
+    border-color: var(--accent)
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2)
+
+.Widget input[type="checkbox"],
+.Widget input[type="radio"]
+    accent-color: var(--accent)
+
+.Widget .button,
+.Widget .button--icon
+    background: var(--control)
+    color: var(--text)
+    border: 1px solid var(--border)
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 var(--inset)
+
+.Widget .button:hover,
+.Widget .button--icon:hover
+    background: var(--control-hover)
+    transform: translateY(-1px)
+
+.Widget .button--primary,
+.Widget .button--primary.button--icon
+    background: var(--accent)
+    color: var(--text-on-primary)
+    border-color: var(--accent)
+
+.Widget .button--primary:hover,
+.Widget .button--primary.button--icon:hover
+    background: color-mix(in srgb, var(--accent), white 14%)
     overflow: visible !important
+
+button,
+.button,
+.button--icon,
+.Search .search-submit,
+.TallyCounter .button
+    border: 1px solid var(--border-main)
+    backdrop-filter: blur(18px) saturate(170%)
+    -webkit-backdrop-filter: blur(18px) saturate(170%)
+
+.button,
+.button--icon
+    background: var(--bg-button)
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.14)
 
 .text
     &--grey
@@ -127,8 +635,6 @@ textarea
     height: 100%
 
 .button--icon
-    background-color: var(--bg-button)
-    border: none
     border-radius: 1em
     display: inline-block
     padding: 0.5em
@@ -137,10 +643,12 @@ textarea
     width: 2em
     color: var(--text-heading)
     cursor: pointer
-    transition: background-color 0.25s ease-out
+    transition: background-color 0.25s ease-out, transform 0.25s ease-out, filter 0.25s ease-out
 
     &:hover
-        background-color: var(--border-main) !important
+        background-color: color-mix(in srgb, var(--bg-button), white 14%) !important
+        transform: translateY(-1px)
+        filter: brightness(1.05)
 
     &.button--primary
         background-color: var(--accent-color) !important
@@ -150,16 +658,17 @@ textarea
             background-color: var(--accent-color-hover, var(--accent-color)) !important
 
 .button
-    border: 0
     border-radius: 2em
     color: var(--text-on-primary) !important
     cursor: pointer
     display: inline-block
     padding: 0.5em 1em
     text-decoration: none
-    transition: background 0.25s ease-out
+    transition: background 0.25s ease-out, transform 0.25s ease-out, filter 0.25s ease-out
     text-align: center
     font-weight: 500
+    background: var(--bg-button)
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.12)
 
     &:disabled
         background-color: var(--text-muted)

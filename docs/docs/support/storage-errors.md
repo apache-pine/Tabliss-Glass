@@ -5,16 +5,16 @@ sidebar_position: 2
 
 # Storage & Cache Errors
 
-TablissNG is unable to load or save settings. This is most commonly caused by private browsing mode, but permissions, disk space, or a corrupt browser profile can also cause issues.
+Tabliss Glass is unable to load or save settings. This is most commonly caused by private browsing mode, but permissions, disk space, or a corrupt browser profile can also cause issues.
 
 ## Storage Error
 
 - **Check for known bugs**
-  - Sometimes a browser update or a bug in TablissNG can cause storage issues.
-  - Check the **[GitHub Issues](https://github.com/BookCatKid/TablissNG/issues)** to see if others are reporting the same problem. You can also open a new issue if the bug hasn't been reported yet.
+  - Sometimes a browser update or a bug in Tabliss Glass can cause storage issues.
+  - Check whether the issue is already known in your current build before troubleshooting further.
 
 - **Check you are not in private or incognito browsing mode**
-  - This is important when using the web version of TablissNG.
+  - This is important when using the web version of Tabliss Glass.
   - This includes permanent private modes like Firefox's "Never remember history" settings.
 
 - **Check you have plenty of disk space available on your device**
@@ -27,4 +27,4 @@ TablissNG is unable to load or save settings. This is most commonly caused by pr
 
 ## Cache Error
 
-This error will cause TablissNG to take longer to load and will prevent it from remembering images you upload to the "Upload Image" background. This error is caused by the same issues that cause the "Storage Error" above and can be fixed with the same steps.
+This error will cause Tabliss Glass to take longer to load and will prevent it from remembering images you upload to the "Upload Image" background. This error is caused by the same issues that cause the "Storage Error" above and can be fixed with the same steps.

@@ -1,8 +1,8 @@
 <p align="left">
-  <img src="src/views/shared/tabliss.svg" alt="TablissNG logo" width="400" />
+  <img src="src/views/shared/tabliss.svg" alt="Tabliss Glass logo" width="400" />
 </p>
 
-> A beautiful, customisable New Tab page for Firefox and Chrome.
+> A glass-style New Tab page for Microsoft Edge and Chromium-based browsers.
 
 <img src="screenshots/screenshot_1.png" width="49%"/> <img src="screenshots/screenshot_2.png" width="50%"/>
 <img src="screenshots/screenshot_3.png" width="49%"/> <img src="screenshots/screenshot_4.png" width="50%"/>
@@ -12,23 +12,13 @@
 <img src="screenshots/screenshot_8.png" width="24%"/>
 
 <div align="center">
-    <a href="https://chromewebstore.google.com/detail/tablissng/dlaogejjiafeobgofajdlkkhjlignalk">
-        <img src="https://img.shields.io/chrome-web-store/users/dlaogejjiafeobgofajdlkkhjlignalk?logo=googlechrome&logoColor=ffffff&color=0779ba"></a>
-    <a href="https://addons.mozilla.org/en-US/firefox/addon/tablissng/">
-        <img src="https://img.shields.io/amo/users/tablissng?logo=firefoxbrowser&logoColor=ffffff"></a>
-    <a href="https://github.com/BookCatKid/TablissNG/stargazers">
-        <img src="https://img.shields.io/github/stars/BookCatKid/TablissNG?style=flat"></a>
-    <a href="https://github.com/BookCatKid/TablissNG/commits/main/">
-        <img src="https://img.shields.io/github/last-commit/BookCatKid/TablissNG?color=0779ba"></a>
-    <a href="https://github.com/BookCatKid/TablissNG/releases/latest">
-        <img src="https://img.shields.io/github/v/release/BookCatKid/TablissNG.svg?logo=github"></a>
     <a href="https://www.gnu.org/licenses/gpl-3.0">
         <img src="https://img.shields.io/badge/License-GNU%20GPL%20v3-blue"></a>
 </div>
 
-## Maintained Fork of Tabliss
+## Tabliss Glass
 
-This repository is a maintained fork of Tabliss, originally a customizable new tab page for Firefox and Chrome. The original project has been abandoned, with no updates for over a year and numerous unmerged pull requests. I cloned the repository and merged most pending pull requests to bring in improvements and bug fixes. Moving forward, I will actively maintain and update this fork to keep Tabliss functional and up to date.
+This repository is my personal glass-style build of Tabliss, tuned to ship the glass look as the default instead of an optional custom CSS setup. It keeps the extension familiar, but the visual language and wording are now centered around this custom version.
 
 ### What's Next?
 
@@ -36,7 +26,7 @@ This repository is a maintained fork of Tabliss, originally a customizable new t
 - Adding new features from community contributions
 - Keeping dependencies up to date
 
-If you were a contributor to the original repo or have ideas for improvements, feel free to open an issue or submit a pull request. Let’s keep Tabliss alive!
+If you have ideas for improvements, feel free to open an issue or submit a pull request. This fork is intended to evolve as a personal build.
 
 ### Looking for contribution ideas?
 
@@ -44,9 +34,9 @@ Check out the [github project](https://github.com/users/BookCatKid/projects/3?qu
 
 ---
 
-## Brief Overview of a Few Improvements Over Tabliss
+## A Few Defaults That Differ From Tabliss
 
-This list is by no means exhaustive. TablissNG includes many other tweaks, quality-of-life improvements, and features not detailed here.
+This list is by no means exhaustive. Tabliss Glass includes many other tweaks, quality-of-life improvements, and visual changes not detailed here.
 
 - Customization
   - Support for custom search engines and browser defaults
@@ -68,17 +58,17 @@ This list is by no means exhaustive. TablissNG includes many other tweaks, quali
 
 ## Installation
 
-<a href="https://addons.mozilla.org/en-US/firefox/addon/tablissng/"><img src="assets/badges/firefox-badge.svg" height="70"></a>
-<a href="https://chromewebstore.google.com/detail/tablissng/dlaogejjiafeobgofajdlkkhjlignalk"><img src="assets/badges/chrome-badge.png" alt="Get the Extension on Chrome" height="70" style="border-radius:4px;"></a>
-<a href="https://microsoftedge.microsoft.com/addons/detail/tablissng/mkaphhbkcccpgkfaifhhdfckagnkcmhm"><img src="assets/badges/edge-badge.png" alt="Get the Extension on Edge" height="70"></a>
+If you want to install the extension locally, start with [INSTALL.md](INSTALL.md).
 
-The extension is available in the [Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/tablissng/), in the [Chrome Web Store](https://chromewebstore.google.com/detail/tablissng/dlaogejjiafeobgofajdlkkhjlignalk), and in the [Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/tablissng/mkaphhbkcccpgkfaifhhdfckagnkcmhm). If you want to use Safari, see [INSTALL.md](INSTALL.md).
+For the Edge build, the manual install flow is:
 
-**Nightly Builds (Firefox):**
+1. Run `pnpm run build:chromium`.
+2. Open `edge://extensions/`.
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select the generated `dist/chromium` folder.
 
-- **Nightly** (v1.6.5.0): [Install Nightly](https://github.com/BookCatKid/TablissNG/releases/download/nightly-auto/tablissng-1.6.5.0.xpi)
-
-If you want to install the extension manually, or want nightly builds, see [INSTALL.md](INSTALL.md).
+If you want to work on the project locally, see the setup notes below.
 
 ## Running Locally
 
@@ -87,8 +77,8 @@ For local development, you'll need Node.js and pnpm installed. Latest versions s
 First, clone the repo:
 
 ```sh
-git clone https://github.com/BookCatKid/TablissNG.git
-cd TablissNG
+git clone <your-repo-url>
+cd Tabliss-Glass
 ```
 
 Then install the dependencies:
@@ -148,10 +138,6 @@ TRELLO_API_KEY=your_key_here # this requires the correct redirect URI to be set 
 
 Special thanks to **joelshepherd** for originally creating and maintaining this project.
 Also, huge appreciation to everyone who contributed, especially those whose pull requests I merged!
-
-<a href="https://github.com/BookCatKid/TablissNG/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=BookCatKid/TablissNG&max=30" />
-</a>
 
 ## Contributing
 

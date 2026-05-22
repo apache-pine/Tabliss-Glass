@@ -13,7 +13,8 @@ const messages = defineMessages({
   },
   description: {
     id: "plugins.css.description",
-    defaultMessage: "Make your new tab more style-ish (advanced users).",
+    defaultMessage:
+      "Make your new tab match your glass setup (advanced users).",
     description: "Description of the Custom CSS widget",
   },
 });

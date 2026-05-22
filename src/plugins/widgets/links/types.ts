@@ -61,7 +61,7 @@ export const defaultData: Data = {
     {
       id: "default-link",
       url: "https://github.com/BookCatKid/TablissNG",
-      name: "TablissNG",
+      name: "Tabliss Glass",
     },
   ],
   visible: true,

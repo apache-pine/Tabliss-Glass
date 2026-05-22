@@ -1,10 +1,10 @@
-# TablissNG - A Maintained Fork of the Beautiful New Tab Extension
+# Tabliss Glass - A Personal Glass New Tab Extension
 
-> **Important**: This is a maintained fork of the original Tabliss project, which was abandoned. I've cloned the repository, merged all existing pull requests, and am actively maintaining it with bug fixes and new features. The original extension is no longer maintained, but this fork keeps Tabliss alive and improving! Github page: <https://github.com/BookCatKid/TablissNG>
+> **Important**: This is my personal glass-style build of the original Tabliss project. The visual defaults and surrounding copy are tuned for the glass treatment I actually use, while keeping the extension flexible for future changes.
 
 Transform your new tab page into something beautiful and uniquely yours. Choose from many background providers, and be rewarded with stunning, new pictures every time you open a new tab. Add your favourite widgets to stay productive throughout your day. Create your own new tab experience.
 
-We care about your privacy and your experience. TablissNG is private, fast, and completely free alternative to extensions like Momentum.
+We care about your privacy and your experience. Tabliss Glass is a private, fast, and completely free alternative to extensions like Momentum.
 
 ## Features
 

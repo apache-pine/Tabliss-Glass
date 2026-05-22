@@ -7,11 +7,11 @@ sidebar_position: 1
 
 import DownloadButtons from '@site/src/components/DownloadButtons';
 
-TablissNG is a beautiful, customizable New Tab page for Firefox, Chrome, and Edge.
+Tabliss Glass is a glass-style, customizable New Tab page for Firefox, Chrome, and Edge.
 
-It is a maintained fork of the original Tabliss project, bringing in new features, bug fixes, and keeping dependencies up to date.
+It is a personal build based on the original Tabliss project, tuned to make the glass aesthetic the default.
 
-## A Few Features Over Tabliss
+## A Few Features Over the Base Project
 
 - **Customization**: Support for custom search engines, browser defaults, and extensive style options.
 - **Widgets**: Time Tracker, Bitcoin Mempool, Top Sites, Binary Clock, Bookmarks, Custom HTML, and more.
@@ -22,7 +22,7 @@ _[More here](./features#brief-overview-of-a-few-improvements-over-tabliss)_
 
 ## Getting Started
 
-To get started with TablissNG, you can install it directly from your browser's store:
+To get started with Tabliss Glass, open the manual Edge install guide below:
 
 <DownloadButtons />
 

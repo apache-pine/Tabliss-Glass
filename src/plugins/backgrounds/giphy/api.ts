@@ -24,9 +24,15 @@ async function giphyFetch(
     const res = await (await fetch(url)).json();
 
     if (!res.data || (Array.isArray(res.data) && res.data.length === 0)) {
-      throw new Error("No GIFs found.");
+      // Return empty data instead of throwing - this is a graceful fallback
+      return { data: [] };
     }
     return res;
+  } catch (error) {
+    // Log error for debugging but don't throw to avoid crashing the UI
+    console.warn("Error fetching GIFs from GIPHY:", error);
+    // Return empty data on any error
+    return { data: [] };
   } finally {
     loader.pop();
   }

@@ -10,7 +10,7 @@ function ScreenshotImage({ src, index }: { src: string; index: number }) {
     <div>
       <img
         src={useBaseUrl(`img/screenshots/${src}`)}
-        alt={`Tabliss Screenshot ${index + 1}`}
+        alt={`Tabliss Glass Screenshot ${index + 1}`}
         className={styles.showcaseImage}
       />
     </div>
@@ -31,7 +31,10 @@ export default function Gallery(): ReactNode {
   ];
 
   return (
-    <Layout title="Gallery" description="View all screenshots of TablissNG.">
+    <Layout
+      title="Gallery"
+      description="View all screenshots of Tabliss Glass."
+    >
       <main className={styles.showcaseSection}>
         <div className="container">
           <Heading

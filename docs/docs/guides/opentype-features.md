@@ -5,9 +5,9 @@ sidebar_position: 2
 
 # OpenType Features in Widgets
 
-Many widgets in TablissNG allow for custom font settings. You can access these by opening a widget's settings and toggling the **Open Font Settings** link.
+Many widgets in Tabliss Glass allow for custom font settings. You can access these by opening a widget's settings and toggling the **Open Font Settings** link.
 
-TablissNG supports advanced typography through **OpenType features**. This allows you to specify more than just the font name; you can also enable specific stylistic sets or typographic variants directly in the "Font" box.
+Tabliss Glass supports advanced typography through **OpenType features**. This allows you to specify more than just the font name; you can also enable specific stylistic sets or typographic variants directly in the "Font" box.
 
 ## How to use
 

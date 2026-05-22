@@ -1,6 +1,6 @@
 {
-  "short_name": "Tabliss",
-  "name": "Tabliss",
+  "short_name": "Glass Tab",
+  "name": "Tabliss Glass",
   "icons": [
     {
       "src": "icons/icon-128.png",
@@ -10,6 +10,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#3498db",
-  "background_color": "#1a1a1a"
+  "theme_color": "#08111f",
+  "background_color": "#08111f"
 }

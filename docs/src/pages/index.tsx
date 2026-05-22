@@ -16,7 +16,7 @@ function HomepageHeader() {
       <div className="container">
         <img
           src={useBaseUrl("img/logo.svg")}
-          alt="TablissNG Logo"
+          alt="Tabliss Glass Logo"
           className={styles.heroLogo}
         />
         <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
@@ -27,15 +27,15 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="https://tablissng.smrff.dev/web/"
+            to="/getting-started/installation/edge"
           >
-            Try in Browser
+            Open the Edge install guide
           </Link>
         </div>
         <div className={styles.showcase} style={{ marginTop: "4rem" }}>
           <img
             src={useBaseUrl("img/screenshots/screenshot_1.png")}
-            alt="Tabliss Showcase"
+            alt="Glass showcase"
             className={styles.showcaseImage}
             style={{ maxWidth: "1000px" }}
           />
@@ -49,7 +49,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Home"
-      description="TablissNG - A beautiful, private, and customizable new tab page for your browser."
+      description="Tabliss Glass - A glass-style, private, and customizable new tab page for your browser."
     >
       <HomepageHeader />
       <main>

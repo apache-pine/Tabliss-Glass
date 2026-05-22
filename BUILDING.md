@@ -1,17 +1,13 @@
-# Building TablissNG
+# Building Tabliss Glass
 
-This guide provides step-by-step instructions for setting up your development environment and building TablissNG from source for various platforms.
+This guide provides step-by-step instructions for setting up your development environment and building Tabliss Glass from source.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
 - **Node.js**: Version 22.x or higher is recommended.
-- **pnpm**: You can install pnpm globally using npm: (you can also install it with other package managers, see https://pnpm.io/installation)
-
-  ```bash
-  npm install -g pnpm
-  ```
+- **pnpm**: Install pnpm using your preferred package manager.
 
 - **Git**: To clone the repository.
 
@@ -20,8 +16,8 @@ Before you begin, ensure you have the following installed on your system:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/BookCatKid/TablissNG.git
-   cd TablissNG
+   git clone <your-repo-url>
+   cd Tabliss-Glass
    ```
 
 2. **Install dependencies**:
@@ -31,11 +27,11 @@ Before you begin, ensure you have the following installed on your system:
 
 ## Development
 
-To run TablissNG in development mode with hot reloading:
+To run Tabliss Glass in development mode with hot reloading:
 
-### Web Version (Browser Preview)
+### Web Preview
 
-This will start a local development server and open the web version in your browser.
+This will start a local development server and open the local preview in your browser.
 
 ```bash
 pnpm run dev
@@ -60,20 +56,18 @@ The output will be in the `dist/` directory.
 
 ### Loading the extension
 
-- **Chromium**
-  1.  Go to [chrome://extensions](chrome://extensions).
-  2.  Enable Developer Mode (top right).
-  3.  Click "Load unpacked".
-  4.  Select the `dist/chromium` folder.
+- **Edge**
+  1. Go to [edge://extensions](edge://extensions).
+  2. Enable Developer Mode.
+  3. Click "Load unpacked".
+  4. Select the `dist/chromium` folder.
 
 - **Firefox**
-  1.  Go to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox).
-  2.  Click "Load Temporary Add-on".
-  3.  Select the `manifest.json` inside the `dist/firefox` folder.
+  1. Go to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox).
+  2. Click "Load Temporary Add-on".
+  3. Select the `manifest.json` inside the `dist/firefox` folder.
 
-**Warning: Data Persistence Notice**
-
-Installing manual or nightly builds alongside the store version can cause configuration conflicts. Switching back from a manual build to a store version often requires a full re-installation, which **will erase your settings and data** unless you have exported them. Always [export your settings](https://tablissng.smrff.dev/guides/backup-and-export) before switching versions.
+Keep the generated build folder in place so your browser can continue loading it.
 
 ## Building for Production
 

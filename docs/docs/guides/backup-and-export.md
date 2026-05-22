@@ -5,11 +5,11 @@ sidebar_position: 1
 
 # Backup & Export Settings
 
-TablissNG allows you to export your entire configuration to a file. This is useful for backing up your settings, moving them to a new browser, or ensuring you don't lose data when switching between development and store versions.
+Tabliss Glass allows you to export your entire configuration to a file. This is useful for backing up your settings, moving them to a new browser, or ensuring you don't lose data when switching between development and store versions.
 
 ## How to Export
 
-1. Open a new tab to view your **TablissNG dashboard**.
+1. Open a new tab to view your **Tabliss Glass dashboard**.
 2. Click the **Settings icon** (⚙️) in the corner of the screen.
 3. Scroll down to the bottom of the **Settings** section.
 4. Look for the **Export** button.
@@ -17,7 +17,7 @@ TablissNG allows you to export your entire configuration to a file. This is usef
 
 ## How to Import
 
-1. Open the **Settings** (⚙️) on the TablissNG dashboard where you want to restore the data.
+1. Open the **Settings** (⚙️) on the Tabliss Glass dashboard where you want to restore the data.
 2. Find the **Import** button.
 3. Select the `.json` file you previously exported.
 4. Your dashboard will refresh and apply the imported settings immediately.

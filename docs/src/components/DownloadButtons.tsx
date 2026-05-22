@@ -1,5 +1,4 @@
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Link from "@docusaurus/Link";
 import React from "react";
 
 interface DownloadButtonsProps {
@@ -7,11 +6,6 @@ interface DownloadButtonsProps {
 }
 
 export default function DownloadButtons({ height = 60 }: DownloadButtonsProps) {
-  const {
-    siteConfig: { customFields },
-  } = useDocusaurusContext();
-  const storeUrls = customFields?.storeUrls as Record<string, string>;
-
   return (
     <div
       style={{
@@ -22,29 +16,17 @@ export default function DownloadButtons({ height = 60 }: DownloadButtonsProps) {
         justifyContent: "center",
       }}
     >
-      <a href={storeUrls.firefox}>
-        <img
-          src={useBaseUrl("/img/badges/firefox-badge.svg")}
-          height={height}
-          alt="Get the Add-on for Firefox"
-        />
-      </a>
-      <a href={storeUrls.chrome}>
-        <img
-          src={useBaseUrl("/img/badges/chrome-badge.png")}
-          alt="Get the Extension on Chrome"
-          height={height}
-          style={{ borderRadius: "4px" }}
-        />
-      </a>
-      <a href={storeUrls.edge}>
-        <img
-          src={useBaseUrl("/img/badges/edge-badge.png")}
-          alt="Get the Extension on Edge"
-          height={height}
-          style={{ borderRadius: "4px" }}
-        />
-      </a>
+      <Link
+        className="button button--primary button--lg"
+        style={{
+          minHeight: height,
+          display: "inline-flex",
+          alignItems: "center",
+        }}
+        to="/getting-started/installation/edge"
+      >
+        Manual Edge install
+      </Link>
     </div>
   );
 }

@@ -19,6 +19,7 @@ import message from "./message";
 import notes from "./notes";
 import palette from "./palette";
 import quote from "./quote";
+import rss from "./rss";
 import search from "./search";
 import since from "./since";
 import tallyCounter from "./tallyCounter";
@@ -48,6 +49,7 @@ export const widgetConfigs = [
   notes,
   palette,
   quote,
+  rss,
   search,
   since,
   time,

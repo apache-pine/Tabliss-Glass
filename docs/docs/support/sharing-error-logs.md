@@ -5,14 +5,14 @@ sidebar_position: 3
 
 # Sharing Error Logs
 
-TablissNG records errors that occur while you use it. You can easily copy and share these logs when reporting a bug.
+Tabliss Glass records errors that occur while you use it. You can easily copy and share these logs when reporting a bug.
 
 ## How to access your error logs
 
 1. When an error occurs, a **⚠ warning icon** appears next to the settings icon on your New Tab page.
 2. Click the **⚠ icon** to open the Errors panel.
 3. Click **Copy Error Log** to copy all recorded errors to your clipboard, or take a screenshot of the Errors panel.
-4. Paste the copied log or screenshot into a **[GitHub Issue](https://github.com/BookCatKid/TablissNG/issues/new)** so I can diagnose the problem.
+4. Paste the copied log or screenshot into a bug report so I can diagnose the problem.
 
 ## What is included in the log?
 

@@ -1,5 +1,5 @@
 /**
- * Top Sites Widget for Tabliss
+ * Top Sites Widget for the personal glass build
  * Forked by Gibryon Bhojraj <gib@rederly.com>
  * ===
  * A list of Top Sites, provided by the Browser topSites API.

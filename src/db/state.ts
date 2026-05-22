@@ -169,7 +169,7 @@ const initData: State = {
     url: "",
     data: null,
   },
-  accent: "#3498db",
+  accent: "#8ecbff",
 };
 
 // Database storage

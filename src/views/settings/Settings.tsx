@@ -27,22 +27,22 @@ const messages = defineMessages({
   resetConfirm: {
     id: "settings.reset.confirm",
     defaultMessage:
-      "Are you sure you want to delete all of your TablissNG settings? This cannot be undone.",
+      "Are you sure you want to delete all of your Tabliss Glass settings? This cannot be undone.",
     description: "Confirmation message when resetting settings",
   },
   ariaRepo: {
     id: "settings.aria.repository",
-    defaultMessage: "Open repository BookCatKid/tablissNG on GitHub",
+    defaultMessage: "Open the project repository on GitHub",
     description: "ARIA label for the GitHub repository link",
   },
   ariaWatch: {
     id: "settings.aria.watch",
-    defaultMessage: "Watch BookCatKid/tablissNG on GitHub",
+    defaultMessage: "Watch the project on GitHub",
     description: "ARIA label for the GitHub watch button",
   },
   ariaStar: {
     id: "settings.aria.star",
-    defaultMessage: "Star BookCatKid/tablissNG on GitHub",
+    defaultMessage: "Star the project on GitHub",
     description: "ARIA label for the GitHub star button",
   },
   settingsImportExportReset: {
@@ -98,8 +98,7 @@ const Settings: FC = () => {
     document.body.appendChild(a);
     a.style.display = "none";
     a.href = url;
-    a.download = "tablissng.json";
-    a.download = "tablissng.json";
+    a.download = "tabliss-glass.json";
     a.click();
     window.URL.revokeObjectURL(url);
     document.body.removeChild(a);
@@ -201,7 +200,7 @@ const Settings: FC = () => {
             }}
           >
             <Icon icon="feather:tag" style={{ fontSize: "0.9em" }} />
-            TablissNG v{VERSION} {DEV ? "DEV " : ""}
+            Tabliss Glass v{VERSION} {DEV ? "DEV " : ""}
           </span>
         </div>
         <Background />
@@ -219,101 +218,6 @@ const Settings: FC = () => {
         </p>
         {/* Only relevant for the web build where IndexedDB may be evicted. Hide for extension builds to avoid confusing prompts in Firefox/Chromium. */}
         {BUILD_TARGET === "web" && <Persist />}
-
-        <div style={{ textAlign: "center" }} className="Widget">
-          <h4>
-            <FormattedMessage
-              id="support"
-              defaultMessage="Support TablissNG"
-              description="Support TablissNG button text"
-            />
-          </h4>
-
-          {useMemo(
-            () => (
-              <div
-                style={{
-                  marginTop: "14px",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "14px",
-                  width: "100%",
-                }}
-              >
-                <div style={{ width: "100%" }}>
-                  <GitHubButton
-                    href="https://github.com/BookCatKid/tablissNG"
-                    data-icon="octicon-repo"
-                    data-size="large"
-                    data-show-count="false"
-                    data-color-scheme={isDark ? "dark" : "light"}
-                    aria-label={intl.formatMessage(messages.ariaRepo)}
-                  >
-                    <span
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "0.4rem",
-                        width: "100%",
-                      }}
-                    >
-                      <Icon icon="feather:code" />{" "}
-                      <FormattedMessage
-                        id="settings.support.contribute"
-                        defaultMessage="Contribute to the project!"
-                        description="Call to action to contribute to the project"
-                      />
-                    </span>
-                  </GitHubButton>
-                </div>
-
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "10px",
-                    width: "100%",
-                  }}
-                >
-                  <div style={{ flex: 1 }}>
-                    <GitHubButton
-                      href="https://github.com/BookCatKid/tablissNG/subscription"
-                      data-icon="octicon-eye"
-                      data-size="large"
-                      data-show-count="true"
-                      data-color-scheme={isDark ? "dark" : "light"}
-                      aria-label={intl.formatMessage(messages.ariaWatch)}
-                    >
-                      <FormattedMessage
-                        id="settings.github.watch"
-                        defaultMessage="Watch"
-                        description="GitHub Watch button text"
-                      />
-                    </GitHubButton>
-                  </div>
-
-                  <div style={{ flex: 1 }}>
-                    <GitHubButton
-                      href="https://github.com/BookCatKid/tablissNG"
-                      data-icon="octicon-star"
-                      data-size="large"
-                      data-show-count="true"
-                      data-color-scheme={isDark ? "dark" : "light"}
-                      aria-label={intl.formatMessage(messages.ariaStar)}
-                    >
-                      <FormattedMessage
-                        id="settings.github.star"
-                        defaultMessage="Star"
-                        description="GitHub Star button text"
-                      />
-                    </GitHubButton>
-                  </div>
-                </div>
-              </div>
-            ),
-            [isDark],
-          )}
-        </div>
 
         <FormattedMessage
           id="settings.translationCredits"

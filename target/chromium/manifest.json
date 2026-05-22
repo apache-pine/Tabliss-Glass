@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "TablissNG",
+  "name": "Tabliss Glass",
   "version": "PLACEHOLDER",
-  "description": "A beautiful, customizable New Tab page with backgrounds and widgets. This is a maintained fork with ongoing updates in the future.",
+  "description": "A personal glass-style New Tab page with backgrounds and widgets.",
   "homepage_url": "https://github.com/BookCatKid/TablissNG",
   "chrome_url_overrides": {
     "newtab": "index.html"

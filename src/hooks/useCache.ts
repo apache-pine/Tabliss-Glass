@@ -76,29 +76,39 @@ export function useRotatingCache<T>(
       cursor >= cache.items.length - 1
     ) {
       // fetch more; preserve up to the last 10 existing items
-      fetch().then((items) => {
-        if (items.length === 0) {
-          return;
-        }
-        const preserved = cache.items.slice(-10);
-        const newItems = [...preserved, ...items];
-        // place cursor on the last preserved item so the next rotation moves into new items
-        const newCursor = Math.max(0, preserved.length - 1);
-        setCache({
-          ...cache,
-          items: newItems,
-          cursor: newCursor,
+      fetch()
+        .then((items) => {
+          if (items.length === 0) {
+            return;
+          }
+          const preserved = cache.items.slice(-10);
+          const newItems = [...preserved, ...items];
+          // place cursor on the last preserved item so the next rotation moves into new items
+          const newCursor = Math.max(0, preserved.length - 1);
+          setCache({
+            ...cache,
+            items: newItems,
+            cursor: newCursor,
+          });
+        })
+        .catch((error) => {
+          // Log error but don't crash - gracefully handle fetch failures
+          console.warn("Error fetching items:", error);
         });
-      });
     }
   }, [cursor]);
 
   // Refresh of deps change
   useEffect(() => {
     if (!isValidCache || !areDepsEqual(deps, cache?.deps ?? [])) {
-      fetch().then((items) =>
-        setCache({ items, cursor: 0, rotated: Date.now(), deps }),
-      );
+      fetch()
+        .then((items) =>
+          setCache({ items, cursor: 0, rotated: Date.now(), deps }),
+        )
+        .catch((error) => {
+          // Log error but don't crash - gracefully handle fetch failures
+          console.warn("Error fetching items on deps change:", error);
+        });
     }
   }, [cache?.deps, ...deps]);
 

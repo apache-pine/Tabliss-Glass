@@ -1,6 +1,7 @@
-# TablissNG Documentation
+# Tabliss Glass Documentation
 
-This is the source code for the TablissNG documentation and landing page, built using [Docusaurus v3](https://docusaurus.io/).
+This is the source code for the Tabliss Glass documentation and landing page, built using [Docusaurus v3](https://docusaurus.io/).
+It is kept as a local docs site for the personal fork.
 
 ## Shared Assets
 
@@ -46,6 +47,10 @@ pnpm run
 
 ## Deployment
 
-Deployment is handled automatically via GitHub Actions whenever changes are pushed to the `main` branch. The site is hosted at `https://tablissng.smrff.dev/` (with the web preview at `https://tablissng.smrff.dev/web/`).
+Build the site locally when you want to preview or validate changes:
 
-The documentation build is part of a unified workflow that assembles both the main web preview and the documentation site into a single deployment.
+```bash
+pnpm run build
+```
+
+The docs output will be placed in the `build/` directory.

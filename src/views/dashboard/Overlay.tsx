@@ -14,7 +14,7 @@ import { useKey, useValue } from "../../lib/db/react";
 const messages = defineMessages({
   settingsHint: {
     id: "dashboard.settingsHint",
-    defaultMessage: "Customise Tabliss",
+    defaultMessage: "Customize the glass tab",
     description: "Hover hint text for the settings icon",
   },
   focusHint: {

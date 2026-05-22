@@ -96,7 +96,7 @@ const Errors: FC<Props> = ({ onClose }) => {
           >
             <FormattedMessage
               id="errors.visitGithub"
-              defaultMessage="Visit Github Page"
+              defaultMessage="Visit project page"
               description="Link to the GitHub repository"
             />
           </a>

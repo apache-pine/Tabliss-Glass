@@ -5,9 +5,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "TablissNG Docs",
+  title: "Tabliss Glass Docs",
   titleDelimiter: "·",
-  tagline: "A beautiful, customizable New Tab page",
+  tagline: "Personal documentation for the Tabliss Glass fork",
   favicon: "img/icons/icon.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -16,25 +16,13 @@ const config: Config = {
     faster: true,
   },
 
-  // Set the production url of your site here
-  url: "https://tablissng.smrff.dev",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // Docs are served at the site root; the web preview lives under /web/.
+  // This site is kept for local documentation and internal reference.
+  url: "http://localhost",
+  // Set the /<baseUrl>/ pathname under which your site is served.
   baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "BookCatKid", // Usually your GitHub org/user name.
-  projectName: "TablissNG", // Usually your repo name.
-
-  customFields: {
-    storeUrls: {
-      firefox: "https://addons.mozilla.org/en-US/firefox/addon/tablissng/",
-      chrome:
-        "https://chromewebstore.google.com/detail/tablissng/dlaogejjiafeobgofajdlkkhjlignalk",
-      edge: "https://microsoftedge.microsoft.com/addons/detail/tablissng/mkaphhbkcccpgkfaifhhdfckagnkcmhm",
-    },
-  },
+  organizationName: "BookCatKid",
+  projectName: "Tabliss-Glass",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -51,9 +39,6 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/BookCatKid/TablissNG/tree/main/docs/",
         },
         blog: false,
         theme: {
@@ -66,9 +51,9 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "TablissNG",
+      title: "Tabliss Glass",
       logo: {
-        alt: "TablissNG Logo",
+        alt: "Tabliss Glass Logo",
         src: "img/icons/icon.svg",
       },
       items: [
@@ -82,22 +67,6 @@ const config: Config = {
           to: "/gallery",
           label: "Gallery",
           position: "left",
-        },
-        {
-          href: "https://tablissng.smrff.dev/web/",
-          label: "Web Preview",
-          position: "left",
-        },
-        {
-          href: "https://github.com/users/BookCatKid/projects/3/views/1",
-          label: "Roadmap",
-          position: "left",
-        },
-        {
-          href: "https://github.com/BookCatKid/TablissNG",
-          position: "right",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
         },
       ],
     },
@@ -122,40 +91,10 @@ const config: Config = {
               label: "Gallery",
               to: "/gallery",
             },
-            {
-              label: "Web Preview",
-              href: "https://tablissng.smrff.dev/web/",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "GitHub Issues",
-              href: "https://github.com/BookCatKid/TablissNG/issues",
-            },
-            {
-              label: "Roadmap",
-              href: "https://github.com/users/BookCatKid/projects/3/views/1",
-            },
-            {
-              label: "Contributing",
-              to: "/community/contributing",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/BookCatKid/TablissNG",
-            },
           ],
         },
       ],
-      copyright: `TablissNG is open source and licensed under GPL-3.0. Built with Docusaurus.`,
+      copyright: `Tabliss Glass is a personal fork and is built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

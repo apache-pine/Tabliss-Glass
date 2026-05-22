@@ -21,14 +21,14 @@ const StoreError: FC<Props> = ({ onClose }) => {
         <p className="large">
           <FormattedMessage
             id="plugins.storageError"
-            defaultMessage="TablissNG is unable to load or save settings. This is most commonly caused by running in private browsing mode; but low disk space or a corrupt browser profile can also be the problem."
+            defaultMessage="Tabliss Glass is unable to load or save settings. This is most commonly caused by running in private browsing mode; but low disk space or a corrupt browser profile can also be the problem."
             description="First paragraph explaining the reasons for a storage error"
           />
         </p>
         <p>
           <FormattedMessage
             id="plugins.storageError2"
-            defaultMessage="If you have settings saved with TablissNG, it might be a temporary issue. Try restarting your browser and checking if your settings return."
+            defaultMessage="If you have settings saved with Tabliss Glass, it might be a temporary issue. Try restarting your browser and checking if your settings return."
             description="Second paragraph suggesting to restart the browser to fix the storage error"
           />
         </p>

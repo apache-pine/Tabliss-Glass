@@ -75,7 +75,7 @@ const FeatureList: FeatureItem[] = [
     ),
     description: (
       <>
-        TablissNG respects your privacy. No tracking, no unnecessary
+        Tabliss Glass respects your privacy. No tracking, no unnecessary
         permissions, and open source under GPL-3.0 for full transparency.
       </>
     ),
