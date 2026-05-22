@@ -1,6 +1,20 @@
 import { API } from "../../types";
 import { RSSCache, RSSData, RSSItem } from "./types";
 
+function decodeFeedContents(contents: string) {
+  const dataUrlMatch = contents.match(/^data:[^,]*;base64,(.*)$/s);
+
+  if (!dataUrlMatch) {
+    return contents;
+  }
+
+  try {
+    return atob(dataUrlMatch[1].replace(/\s+/g, ""));
+  } catch {
+    return contents;
+  }
+}
+
 export async function fetchRSSFeed(
   data: RSSData,
   loader: API["loader"],
@@ -54,7 +68,10 @@ export async function fetchRSSFeed(
 
     // Parse the XML response
     const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(jsonData.contents, "text/xml");
+    const xmlDoc = parser.parseFromString(
+      decodeFeedContents(jsonData.contents),
+      "text/xml",
+    );
 
     // Check for parse errors
     if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
