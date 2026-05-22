@@ -4,7 +4,7 @@
   "description": "A personal glass-style new tab page inspired by Tabliss.",
   "license": "GPL-3.0",
   "private": true,
-  "packageManager": "pnpm@11.1.1",
+  "packageManager": "pnpm@11.2.2",
   "author": {
     "name": "Tabliss Glass"
   },

@@ -73,6 +73,21 @@ const CountdownSettings: FC<Props> = ({ data = defaultData, setData }) => (
         />
       </label>
     </label>
+
+    <label>
+      <input
+        type="checkbox"
+        checked={data.showPrefix !== false}
+        onChange={(event) =>
+          setData({ ...data, showPrefix: event.target.checked })
+        }
+      />{" "}
+      <FormattedMessage
+        id="plugins.countdown.showPrefix"
+        defaultMessage='Show "in" prefix'
+        description="Label for the countdown prefix checkbox"
+      />
+    </label>
   </div>
 );
 
